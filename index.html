@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#44639D">
+
+    <title>Sommers Design</title>
+
+    <!-- ROBOTO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- SITE CSS -->
+
+    <link rel="stylesheet" href="sommers-styles.css">
+
+    </head>
+
+    <body>
+
+        <div class="page-container">
+
+           <div class="bg-secondary-blue">
+
+                <img
+                    src="images/sommers-header.svg"
+                    style="padding-top: 60px;"
+                    alt="Sommers Design"
+                >
+
+                <img
+                    src="images/sommers-i-love-art.svg"
+                    style="padding-top: 30px;"
+                    alt="I Love Art"
+                >
+
+                <img
+                    src="images/sommers-circle-art-sm.svg"
+                    alt="artist bio"
+
+                >
+            </div>
+
+            <div class="bg-primary-blue">
+
+                <img
+                    src="images/sommers-gallery.svg"
+                    alt="Gallery"
+                >
+
+                <div id="gallery-view">
+                    <!-- GALLERY 1 -->
+
+                    <div class="gallery-panel">
+
+                        <img
+                            src="images/sommers-gallery1.jpg"
+                            alt="Gallery 1"
+                        >
+
+                        <!-- Gallery 1 hotspots -->
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="against-the-current"
+                            aria-label="View Against the Current">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="blue-sentinel"
+                            aria-label="View Blue Sentinel">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="on-the-green"
+                            aria-label="View On the Green">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="blue-summit"
+                            aria-label="View Blue Summit">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="blue-summit-ii"
+                            aria-label="View Blue Summit II">
+                        </button>
+
+                    </div>
+
+
+                    <!-- GALLERY 2 -->
+
+                    <div class="gallery-panel">
+
+                        <img
+                            src="images/sommers-gallery2.jpg"
+                            alt="Gallery 2"
+                        >
+
+                        <!-- GALLERY 2 hotspots -->
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="kerry-hill-portrait"
+                            aria-label="View Kerry Hill Portrait">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="the-weight-of-blue"
+                            aria-label="View The Weight of Blue">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="the-rabbit-with-no-name"
+                            aria-label="View The Rabbit with No Name">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="the-rabbit-with-no-name-cover"
+                            aria-label="View The Rabbit with No Name">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="cassanova-cover"
+                            aria-label="View Cassanova the Swan Who Explored Casco Bay">
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                    <!-- EXPANDED ARTWORK VIEW -->
+
+                 <section id="artwork-view" hidden>
+
+                    <img
+                        id="artwork-image"
+                        src=""
+                        alt=""
+                        tabindex="0"
+                        aria-label="Return to gallery"
+                    >
+
+                    <div class="artwork-details">
+                        <h2 id="artwork-title" class="art-name"></h2>
+                        <p id="artwork-description" class="art-size"></p>
+                    </div>
+                    
+                </section>
+
+                <footer class="site-footer">
+
+                    <hr>
+
+                    <p> 2026 Tracy Sommers. All rights reserved. 
+                        <br>
+                        Artwork may not be reproduced without permission.
+                    </p>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+        <script src="js/sommers.js"></script>
+
+    </body>
+
+
+</html>

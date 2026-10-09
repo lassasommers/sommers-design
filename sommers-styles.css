@@ -1,0 +1,295 @@
+/*====================================================
+  DESIGN SYSTEM
+====================================================*/
+
+:root {
+
+  /* Page backgrounds */
+  --primary-blue: #0C244C;
+  --secondary-blue: #44639D;
+  --light-blue: #CDD8EC;
+  --bright-blue: #3498DB;
+  --orange: #F39C12;
+  --yellow: #F1C40F;
+  --green: #2ECC71;
+  --red: #DF1626;
+
+  /* Text */
+  --text-color: #131B29;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --black: #1a1a1a;
+
+  /* Page layout */
+  --page-max-width: 500px;
+}
+
+/*====================================================
+  FOUNDATION
+====================================================*/
+
+html {
+    background-color: #d9d9d9;
+}
+
+body {
+    width: 100%;
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.page-container {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+/* Text color options */
+
+.white-text {
+  color: var(--white);
+}
+
+.white-text h1,
+.white-text p {
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.space-10px {
+    height: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*====================================================
+  PAGE SECTION COLOR SCHEMES
+====================================================*/
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.bg-secondary-blue {
+  background-color: var(--secondary-blue);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+/*====================================================
+  TYPOGRAPHY
+====================================================*/
+h1 {
+   font-size: 101px;
+   color: var(--white);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.art-name {
+    font-size: min(13.6vw, 28px);
+    padding: 6px 0 0 20px;
+    line-height: 1;
+    color: var(--white);
+}
+
+.art-size{
+    font-size: min(7.73vw, 18.7px);
+    padding: 0 0 20px 20px;
+    line-height: 1;
+    color: var(--white);
+}
+
+/*====================================================
+  graphics
+====================================================*/
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*====================================================
+  footer
+====================================================*/
+
+.site-footer {
+  padding: 40px 20px;
+  color: var(--white);
+}
+
+.site-footer hr {
+  border: 0;
+  border-top: 1px solid var(--white);
+  margin: 0 0 20px;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+/*====================================================
+  GALLERY HOTSPOTS
+====================================================*/
+
+/* Gallery container */
+
+.gallery-panel {
+    position: relative;
+}
+
+/* Gallery image */
+
+.gallery-panel > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Clickable hotspots */
+
+.gallery-hotspot {
+    position: absolute;
+    display: block;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+/*====================================================
+  GALLERY 1 HOTSPOT POSITIONS
+====================================================*/
+
+/* Against the Current — upper left */
+
+.gallery-hotspot[data-artwork="against-the-current"] {
+    top: 2.5%;
+    left: 1.4%;
+    width: 38.5%;
+    height: 40%;
+}
+
+/* Blue Sentinel — upper right */
+
+.gallery-hotspot[data-artwork="blue-sentinel"] {
+    top: 2.5%;
+    left: 64.7%;
+    width: 33.8%;
+    height: 40%;
+}
+
+/* On the Green — lower left */
+
+.gallery-hotspot[data-artwork="on-the-green"] {
+    top: 57.8%;
+    left: 1.4%;
+    width: 38.5%;
+    height: 39.7%;
+}
+
+/* Blue Summit — center bottom */
+
+.gallery-hotspot[data-artwork="blue-summit"] {
+    top: 60.8%;
+    left: 41.3%;
+    width: 21.9%;
+    height: 36.7%;
+}
+
+/* Blue Summit II — right center */
+
+.gallery-hotspot[data-artwork="blue-summit-ii"] {
+    top: 44.8%;
+    left: 64.7%;
+    width: 33.8%;
+    height: 46.5%;
+}
+
+/*====================================================
+  GALLERY 2 HOTSPOT POSITIONS
+====================================================*/
+
+/* Kerry Hill Portrait — upper left */
+
+.gallery-hotspot[data-artwork="kerry-hill-portrait"] {
+    top: 0%;
+    left: 1.4%;
+    width: 22.7%;
+    height: 63.8%;
+}
+
+/* The Weight of Blue — upper center */
+
+.gallery-hotspot[data-artwork="the-weight-of-blue"] {
+    top: 0%;
+    left: 41.1%;
+    width: 32%;
+    height: 63.8%;
+}
+
+/* The Rabbit with No Name — upper right */
+
+.gallery-hotspot[data-artwork="the-rabbit-with-no-name"] {
+    top: 0%;
+    left: 74.6%;
+    width: 23.9%;
+    height: 42.8%;
+}
+
+/* The Rabbit with No Name — bottom left */
+
+.gallery-hotspot[data-artwork="the-rabbit-with-no-name-cover"] {
+    top: 65.8%;
+    left: 1.4%;
+    width: 38.2%;
+    height: 32.4%;
+}
+
+/* Cassanova — bottom center */
+
+.gallery-hotspot[data-artwork="cassanova-cover"] {
+    top: 65.8%;
+    left: 41.1%;
+    width: 40.5%;
+    height: 32.4%;
+}
