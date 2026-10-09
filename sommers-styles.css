@@ -376,7 +376,7 @@ img {
     clip-path: inset(0 100% 0 0);
 
     animation: paintReveal 6s ease-in-out forwards;
-
+    animation-delay: 5s;
     pointer-events: none;
 }
 
@@ -408,8 +408,4 @@ img {
 
     z-index: 10;
     cursor: pointer;
-
-    /* TEMPORARY: Show hotspot */
-    background: rgba(255, 0, 0, 0.35);
-    outline: 2px solid red;
 }
