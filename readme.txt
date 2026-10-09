@@ -41,3 +41,19 @@ index.html
     secondary blue: #44639D
 
     image art: full width bleed, hieght auto
+
+    font sizing formula based on baseline page width of 375: The formula is simply:
+    original size ÷ 375 × 100 = vw
+
+    DESKTOP BROWSER
+┌─────────────────────────────────────────────┐
+│  gray │          blue          │ gray
+│       |                        |           │
+│        ┌───────────────────────┐            │
+│        │                       │            │
+│        │    .page-container    │            │
+│        │       max 500px       │            │
+│        │                       │            │
+│        └───────────────────────┘            │
+│                                             │
+└─────────────────────────────────────────────┘

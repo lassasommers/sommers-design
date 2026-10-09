@@ -209,18 +209,18 @@ img {
     height: 40%;
 }
 
-/* Blue Sentinel — upper right */
+/* Guardian — tall right column */
 
-.gallery-hotspot[data-artwork="blue-sentinel"] {
+.gallery-hotspot[data-artwork="guardian"] {
     top: 2.5%;
     left: 64.7%;
-    width: 33.8%;
-    height: 40%;
+    width: 14.9%;
+    height: 95%;
 }
 
-/* On the Green — lower left */
+/* blue sentinel — lower left */
 
-.gallery-hotspot[data-artwork="on-the-green"] {
+.gallery-hotspot[data-artwork="blue-sentinel"] {
     top: 57.8%;
     left: 1.4%;
     width: 38.5%;
@@ -230,66 +230,186 @@ img {
 /* Blue Summit — center bottom */
 
 .gallery-hotspot[data-artwork="blue-summit"] {
-    top: 60.8%;
+    top: 57.8%;
     left: 41.3%;
     width: 21.9%;
-    height: 36.7%;
+    height: 39.7%;
 }
 
-/* Blue Summit II — right center */
+/* Blue Summit II — center top */
 
 .gallery-hotspot[data-artwork="blue-summit-ii"] {
-    top: 44.8%;
-    left: 64.7%;
-    width: 33.8%;
-    height: 46.5%;
+    top: 26.7%;
+    left: 41.3%;
+    width: 21.9%;
+    height: 28.3%;
 }
 
 /*====================================================
   GALLERY 2 HOTSPOT POSITIONS
 ====================================================*/
 
-/* Kerry Hill Portrait — upper left */
+/* Kerry Hill Portrait — far left */
 
 .gallery-hotspot[data-artwork="kerry-hill-portrait"] {
     top: 0%;
     left: 1.4%;
     width: 22.7%;
-    height: 63.8%;
+    height: 100%;
 }
 
-/* The Weight of Blue — upper center */
+/* Perched — narrow center-left column */
+
+.gallery-hotspot[data-artwork="perched"] {
+    top: 23.8%;
+    left: 25.5%;
+    width: 14%;
+    height: 76.2%;
+}
+
+/* The Weight of Blue — large center painting */
 
 .gallery-hotspot[data-artwork="the-weight-of-blue"] {
     top: 0%;
     left: 41.1%;
     width: 32%;
-    height: 63.8%;
+    height: 100%;
 }
 
-/* The Rabbit with No Name — upper right */
+/* Cassanova — upper right */
+
+.gallery-hotspot[data-artwork="casanova"] {
+    top: 0%;
+    left: 74.5%;
+    width: 24%;
+    height: 67%;
+}
+
+/* On the Green — lower right */
+
+.gallery-hotspot[data-artwork="on-the-green"] {
+    top: 70.2%;
+    left: 74.5%;
+    width: 24%;
+    height: 29.8%;
+}
+
+/*====================================================
+  GALLERY 3 HOTSPOT POSITIONS
+====================================================*/
+
+/* The Rabbit with No Name — upper left */
 
 .gallery-hotspot[data-artwork="the-rabbit-with-no-name"] {
     top: 0%;
-    left: 74.6%;
-    width: 23.9%;
-    height: 42.8%;
-}
-
-/* The Rabbit with No Name — bottom left */
-
-.gallery-hotspot[data-artwork="the-rabbit-with-no-name-cover"] {
-    top: 65.8%;
     left: 1.4%;
     width: 38.2%;
-    height: 32.4%;
+    height: 41.2%;
 }
 
-/* Cassanova — bottom center */
+/* Kerry Hill Gold — bottom left */
 
-.gallery-hotspot[data-artwork="cassanova-cover"] {
-    top: 65.8%;
+.gallery-hotspot[data-artwork="kerry-hill-gold"] {
+    top: 60%;
+    left: 1.7%;
+    width: 38%;
+    height: 40%;
+}
+
+/* Queen of the Piling — center column */
+
+.gallery-hotspot[data-artwork="queen-of-the-piling"] {
+    top: 6.3%;
     left: 41.1%;
-    width: 40.5%;
-    height: 32.4%;
+    width: 16.2%;
+    height: 93.7%;
+}
+
+/* Cassanova Boat — upper right */
+
+.gallery-hotspot[data-artwork="casanova-boat"] {
+    top: 0%;
+    left: 58.7%;
+    width: 39.8%;
+    height: 48.2%;
+}
+
+/* Blue Summit III — bottom right */
+
+.gallery-hotspot[data-artwork="blue-summit-iii"] {
+    top: 50.5%;
+    left: 58.7%;
+    width: 39.8%;
+    height: 49.5%;
+}
+
+
+
+/*====================================================
+  CIRCLE ART ANIMATION
+====================================================*/
+
+.circle-art {
+    position: relative;
+    width: 100%;
+}
+
+.circle-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Base artwork */
+
+.circle-base {
+    position: relative;
+}
+
+/* Animated overlay */
+
+.circle-paint {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    clip-path: inset(0 100% 0 0);
+
+    animation: paintReveal 6s ease-in-out forwards;
+
+    pointer-events: none;
+}
+
+@keyframes paintReveal {
+
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+
+}
+
+
+
+/*====================================================
+  EMAIL HOTSPOT
+====================================================*/
+
+.circle-email-hotspot {
+    position: absolute;
+
+    top: 77%;
+    left: 5%;
+    width: 16%;
+    height: 16%;
+
+    z-index: 10;
+    cursor: pointer;
+
+    /* TEMPORARY: Show hotspot */
+    background: rgba(255, 0, 0, 0.35);
+    outline: 2px solid red;
 }

@@ -47,11 +47,34 @@
                     alt="I Love Art"
                 >
 
-                <img
-                    src="images/sommers-circle-art-sm.svg"
-                    alt="artist bio"
+            <!-- CIRCLE ART ANIMATION -->
 
-                >
+                <div class="circle-art">
+
+                    <!-- Base image -->
+                    <img
+                        src="images/sommers-circle-art.svg"
+                        class="circle-base"
+                        alt="Artist bio"
+                    >
+
+                    <!-- Painted overlay -->
+                    <img
+                        src="images/sommers-circle-art-y.svg"
+                        class="circle-paint"
+                        alt=""
+                        aria-hidden="true"
+                    >
+
+                    <!-- Email hotspot -->
+                    <a
+                        href="mailto:youremail@example.com"
+                        class="circle-email-hotspot"
+                        aria-label="Email Tracy Sommers"
+                    ></a>
+
+                </div>
+
             </div>
 
             <div class="bg-primary-blue">
@@ -87,8 +110,8 @@
 
                         <button
                             class="gallery-hotspot"
-                            data-artwork="on-the-green"
-                            aria-label="View On the Green">
+                            data-artwork="guardian"
+                            aria-label="View Guardian">
                         </button>
 
                         <button
@@ -123,6 +146,12 @@
                             aria-label="View Kerry Hill Portrait">
                         </button>
 
+                         <button
+                            class="gallery-hotspot"
+                            data-artwork="perched"
+                            aria-label="View Perched">
+                        </button>
+
                         <button
                             class="gallery-hotspot"
                             data-artwork="the-weight-of-blue"
@@ -131,30 +160,66 @@
 
                         <button
                             class="gallery-hotspot"
+                            data-artwork="casanova"
+                            aria-label="View Cassanova the Swan Who Explored Casco Bay">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="on-the-green"
+                            aria-label="View On The Green">
+                        </button>
+
+                    </div>
+
+                    <!-- GALLERY 3 -->
+
+                    <div class="gallery-panel">
+
+                        <img
+                            src="images/sommers-gallery3.jpg"
+                            alt="Gallery 3"
+                        >
+
+                        <!-- GALLERY 3 hotspots -->
+                        <button
+                            class="gallery-hotspot"
                             data-artwork="the-rabbit-with-no-name"
                             aria-label="View The Rabbit with No Name">
                         </button>
 
                         <button
                             class="gallery-hotspot"
-                            data-artwork="the-rabbit-with-no-name-cover"
-                            aria-label="View The Rabbit with No Name">
+                            data-artwork="kerry-hill-gold"
+                            aria-label="View Kerry Hill Gold">
                         </button>
 
                         <button
                             class="gallery-hotspot"
-                            data-artwork="cassanova-cover"
-                            aria-label="View Cassanova the Swan Who Explored Casco Bay">
+                            data-artwork="queen-of-the-piling"
+                            aria-label="View Queen of the Piling">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="casanova-boat"
+                            aria-label="View Casanova Boat">
+                        </button>
+
+                        <button
+                            class="gallery-hotspot"
+                            data-artwork="blue-summit-iii"
+                            aria-label="View Blue Summit III">
                         </button>
 
                     </div>
 
+
                 </div>
 
+                 <!-- EXPANDED ARTWORK VIEW -->
 
-                    <!-- EXPANDED ARTWORK VIEW -->
-
-                 <section id="artwork-view" hidden>
+                <section id="artwork-view" hidden>
 
                     <img
                         id="artwork-image"

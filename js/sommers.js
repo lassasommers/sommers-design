@@ -31,14 +31,38 @@ const artworks = {
     },
 
     "blue-summit-ii": {
-        image: "images/blue-summit-ii-2019.jpg",
+        image: "images/blue-summit-ii-2016.jpg",
         title: "BLUE SUMMIT II",
         details: '24" x 46" ACRYLIC ON CANVAS'
+    },
+
+    "blue-summit-iii": {
+        image: "images/blue-summit-iii-2019.jpg",
+        title: "BLUE SUMMIT III",
+        details: '24" x 46" ACRYLIC ON CANVAS'
+    },
+
+    "guardian": {
+        image: "images/guardian-2021.jpg",
+        title: "GUARDIAN",
+        details: '24" x 46" ACRYLIC ON CANVAS'
+    },
+
+    "queen-of-the-piling": {
+        image: "images/queen-of-piling-2018.png",
+        title: "QUEEN OF THE PILING",
+        details: '24" x 46" MIXED MEDIA ACRYLIC ON CANVAS'
     },
 
     "kerry-hill-portrait": {
         image: "images/kerry-hill-portrait-2018.jpg",
         title: "KERRY HILL PORTRAIT",
+        details: '24" x 46" ACRYLIC ON CANVAS'
+    },
+
+    "kerry-hill-gold": {
+        image: "images/kerry-hill-gold-2018.jpg",
+        title: "KERRY HILL GOLD",
         details: '24" x 46" ACRYLIC ON CANVAS'
     },
 
@@ -48,23 +72,30 @@ const artworks = {
         details: '24" x 46" ACRYLIC ON CANVAS'
     },
 
-    "the-rabbit-with-no-name": {
-        image: "images/no-name-rabbit-cover.jpg",
-        title: "THE RABBIT WITH NO NAME",
-        details: "CHILDREN'S BOOK ILLUSTRATION"
+    "perched": {
+        image: "images/perched-2021.jpg",
+        title: "PERCHED",
+        details: '24" x 46" MIXED MEDIA ACRYLIC ON CANVAS'
     },
 
-    "the-rabbit-with-no-name-cover": {
+    "the-rabbit-with-no-name": {
         image: "images/no-name-rabbit.jpg",
         title: "THE RABBIT WITH NO NAME",
         details: "CHILDREN'S BOOK ILLUSTRATION"
     },
 
-    "cassanova-cover": {
-        image: "images/casanova-cover.jpg",
-        title: "CASSANOVA THE SWAN WHO EXPLORED CASCO BAY",
+    "casanova": {
+        image: "images/casanova.jpg",
+        title: "CASANOVA THE SWAN WHO EXPLORED CASCO BAY",
         details: "CHILDREN'S BOOK ILLUSTRATION"
-    }
+    },
+
+    "casanova-boat": {
+        image: "images/casanova-boat.jpg",
+        title: "CASANOVA THE SWAN WHO EXPLORED CASCO BAY",
+        details: "CHILDREN'S BOOK ILLUSTRATION"
+    },
+
 
 };
 
@@ -100,25 +131,35 @@ document.querySelectorAll(".gallery-hotspot").forEach(button => {
         galleryScrollPosition = window.scrollY;
         lastHotspot = button;
 
-        artworkImage.src = artwork.image;
-        artworkImage.alt = artwork.title;
+        // Prepare the new image before displaying it
+        const newImage = new Image();
 
-        artworkTitle.textContent = artwork.title;
-        artworkDescription.textContent = artwork.details;
+        newImage.onload = () => {
 
-        // Measure gallery height before hiding it
-        const galleryHeight = galleryView.offsetHeight;
+            artworkImage.src = artwork.image;
+            artworkImage.alt = artwork.title;
 
-        // Switch from gallery to individual artwork
-        galleryView.hidden = true;
-        artworkView.hidden = false;
+            artworkTitle.textContent = artwork.title;
+            artworkDescription.textContent = artwork.details;
 
-        // Preserve the page height and scroll position
-        artworkView.style.minHeight = galleryHeight + "px";
+            // Measure gallery height before hiding it
+            const galleryHeight = galleryView.offsetHeight;
 
-        window.scrollTo(0, galleryScrollPosition);
+            // Switch from gallery to individual artwork
+            galleryView.hidden = true;
+            artworkView.hidden = false;
 
-        artworkImage.focus({ preventScroll: true });
+            // Preserve page height and scroll position
+            artworkView.style.minHeight = galleryHeight + "px";
+
+            window.scrollTo(0, galleryScrollPosition);
+
+            artworkImage.focus({ preventScroll: true });
+
+        };
+
+        // Start loading the selected artwork
+        newImage.src = artwork.image;
 
     });
 
